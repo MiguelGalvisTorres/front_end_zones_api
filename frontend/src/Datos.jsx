@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Datos() {
     const [datos, setDatos] = useState([])
@@ -95,6 +96,9 @@ export default function Datos() {
                                 <button type="button" onClick={function (){
                                     eliminar_dato(zone.id)
                                 }}>Eliminar</button>
+                                <Link to={"/Editar/"+zone.id}>
+                                    <button>Editar</button>
+                                </Link>
                             </td>
                         </tr>
                     )
